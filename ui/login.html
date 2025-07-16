@@ -1,6 +1,18 @@
-<form onsubmit="login(event)">
-  Email: <input id="email"><br>
-  Password: <input id="password" type="password"><br>
-  <button type="submit">Login</button>
-</form>
-<script src="/ui/script.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="/ui/style.css">
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="/ui/script.js"></script>
+</head>
+<body>
+  <div id="login-app">
+    <form @submit.prevent="login">
+      Email: <input v-model="email" type="text" /><br />
+      Password: <input v-model="password" type="password" /><br />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

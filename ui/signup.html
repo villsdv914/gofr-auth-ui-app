@@ -1,6 +1,18 @@
-<form onsubmit="signup(event)">
-  Email: <input id="email"><br>
-  Password: <input id="password" type="password"><br>
-  <button type="submit">Signup</button>
-</form>
-<script src="/ui/script.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+  <link rel="stylesheet" href="/ui/style.css">
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="/ui/script.js"></script>
+</head>
+<body>
+  <div id="signup-app">
+    <form @submit.prevent="signup">
+      Email: <input v-model="email" type="text" /><br />
+      Password: <input v-model="password" type="password" /><br />
+      <button type="submit">Signup</button>
+    </form>
+  </div>
+</body>
+</html>
