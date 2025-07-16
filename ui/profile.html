@@ -1,3 +1,16 @@
-<button onclick="fetchProfile()">Load Profile</button>
-<pre id="profile"></pre>
-<script src="/ui/script.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Profile</title>
+  <link rel="stylesheet" href="/ui/style.css">
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="/ui/script.js"></script>
+</head>
+<body>
+  <div id="profile-app">
+    <button @click="fetchProfile">Load Profile</button>
+    <button @click="logout">Logout</button>
+    <pre>{{ profile }}</pre>
+  </div>
+</body>
+</html>
